@@ -33,13 +33,6 @@ CREATE TABLE `admin.estoque_imagens` (
   `imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `admin.estoque_imagens`
---
-
-INSERT INTO `admin.estoque_imagens` (`id`, `produto_id`, `imagem`) VALUES
-(1, 1, '5f8f7b4a5eb0a.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -51,13 +44,6 @@ CREATE TABLE `admin.imagens_imoveis` (
   `imovel_id` int(11) NOT NULL,
   `imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin.imagens_imoveis`
---
-
-INSERT INTO `admin.imagens_imoveis` (`id`, `imovel_id`, `imagem`) VALUES
-(2, 2, '5fb40540e031b.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,13 +57,6 @@ CREATE TABLE `admin_agenda` (
   `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `admin_agenda`
---
-
-INSERT INTO `admin_agenda` (`id`, `tarefa`, `data`) VALUES
-(1, 'Teste', '2020-11-18');
-
 -- --------------------------------------------------------
 
 --
@@ -89,13 +68,6 @@ CREATE TABLE `admin_chat` (
   `user_id` int(11) NOT NULL,
   `mensagem` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin_chat`
---
-
-INSERT INTO `admin_chat` (`id`, `user_id`, `mensagem`) VALUES
-(1, 1, 'Teste\n');
 
 -- --------------------------------------------------------
 
@@ -110,13 +82,6 @@ CREATE TABLE `admin_clientes` (
   `tipo` varchar(255) NOT NULL,
   `cpf_cnpj` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin_clientes`
---
-
-INSERT INTO `admin_clientes` (`id`, `nome`, `email`, `tipo`, `cpf_cnpj`) VALUES
-(1, 'Cliente', 'cliente@email.com', 'fisico', '000.000.000-00');
 
 -- --------------------------------------------------------
 
@@ -133,13 +98,6 @@ CREATE TABLE `admin_empreendimentos` (
   `slug` varchar(255) NOT NULL,
   `order_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin_empreendimentos`
---
-
-INSERT INTO `admin_empreendimentos` (`id`, `nome`, `tipo`, `preco`, `imagem`, `slug`, `order_id`) VALUES
-(1, 'Empreendimento', 'residencial', '100.000,00', '5f8f79a5a20b7.jpg', 'empreendimento', 1);
 
 -- --------------------------------------------------------
 
@@ -158,13 +116,6 @@ CREATE TABLE `admin_estoque` (
   `quantidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `admin_estoque`
---
-
-INSERT INTO `admin_estoque` (`id`, `nome`, `descricao`, `largura`, `altura`, `comprimento`, `peso`, `quantidade`) VALUES
-(1, 'Mouse', 'Black & Green', 2, 1, 1, 3, 5);
-
 -- --------------------------------------------------------
 
 --
@@ -180,17 +131,6 @@ CREATE TABLE `admin_financeiro` (
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `admin_financeiro`
---
-
-INSERT INTO `admin_financeiro` (`id`, `cliente_id`, `nome`, `valor`, `vencimento`, `status`) VALUES
-(1, 1, 'Pagamento', '100,00', '2020-10-22', 1),
-(2, 1, 'Pagamento', '100,00', '2020-11-21', 0),
-(3, 1, 'Pagamento', '100,00', '2020-12-21', 0),
-(4, 1, 'Pagamento', '100,00', '2021-01-20', 0),
-(5, 1, 'Pagamento', '100,00', '2021-02-19', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -205,13 +145,6 @@ CREATE TABLE `admin_imoveis` (
   `area` int(11) NOT NULL,
   `order_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin_imoveis`
---
-
-INSERT INTO `admin_imoveis` (`id`, `empreend_id`, `nome`, `preco`, `area`, `order_id`) VALUES
-(2, 1, 'Teste', '100.00', 200, 0);
 
 -- --------------------------------------------------------
 
@@ -240,13 +173,6 @@ CREATE TABLE `admin_users` (
   `nome` varchar(255) NOT NULL,
   `cargo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `admin_users`
---
-
-INSERT INTO `admin_users` (`id`, `user`, `password`, `img`, `nome`, `cargo`) VALUES
-(1, 'admin', 'admin', '', 'Admin', 2);
 
 -- --------------------------------------------------------
 
